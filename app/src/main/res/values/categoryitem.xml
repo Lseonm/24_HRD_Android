@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="카테고리">
+        <item>교양</item>
+        <item>정보보안학과</item>
+    </string-array>
+</resources>

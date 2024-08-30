@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="20dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imgSetting"
+        android:layout_width="80dp"
+        android:layout_height="45dp"
+        android:layout_gravity="right"
+        android:src="@drawable/settingslogo" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:src="@drawable/mainlogo"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="중고 교재 거래"
+            android:layout_marginTop="15dp"
+            android:textSize="25sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#DFE4D6">
+
+        <LinearLayout
+            android:layout_width="340dp"
+            android:layout_height="510dp"
+            android:layout_margin="35dp"
+            android:orientation="vertical"
+            android:background="#DCDFD9">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp">
+
+                <android.widget.Button
+                    android:background="#C6D8C2"
+                    android:id="@+id/btnElectiveCourse"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:text="교양"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"/>
+
+                <android.widget.Button
+                    android:background="#C6D8C2"
+                    android:id="@+id/btnInformationSecurity"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:text="정보보안
+                    학과"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"/>
+                <android.widget.Button
+                    android:background="#C6D8C2"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:text="학과"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <android.widget.Button
+                    android:background="#C6D8C2"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:text="학과"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"/>
+
+                <android.widget.Button
+                    android:background="#C6D8C2"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:text="학과"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"/>
+
+                <android.widget.Button
+                    android:background="#C6D8C2"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:text="학과"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"/>
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <android.widget.Button
+                    android:background="#C6D8C2"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:text="학과"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"/>
+
+                <android.widget.Button
+                    android:background="#C6D8C2"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:text="학과"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"/>
+                <android.widget.Button
+                    android:background="#C6D8C2"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:text="학과"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <android.widget.Button
+                    android:background="#C6D8C2"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:text="학과"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"/>
+
+                <android.widget.Button
+                    android:background="#C6D8C2"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:text="학과"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"/>
+                <android.widget.Button
+                    android:background="#C6D8C2"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    android:text="학과"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
