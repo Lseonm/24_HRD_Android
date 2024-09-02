@@ -14,6 +14,8 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import java.util.ArrayList;
 
 public class ElectivecourseActivity extends AppCompatActivity {
@@ -62,9 +64,30 @@ public class ElectivecourseActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // 바텀 내비게이션
+        // 바텀 내비게이션
+        BottomNavigationView ecBnavi = findViewById(R.id.ecBnavi);
+        ecBnavi.setOnNavigationItemSelectedListener(item -> {
+            if (item.getItemId() == R.id.menu_chat) {
+                startActivity(new Intent(this, ChattingActivity.class));
+                finish();  // 현재 액티비티 종료
+                return true;
+            } else if (item.getItemId() == R.id.menu_myInfo) {
+                startActivity(new Intent(this, MyInfoActivity.class));
+                finish();  // 현재 액티비티 종료
+                return true;
+            } else if (item.getItemId() == R.id.menu_home) {
+                startActivity(new Intent(this, MainActivity.class));
+                finish();  // 현재 액티비티 종료
+                return true;
+            }
+            return false;
+        });
     }
 
-    // 특정 카테고리의 제품 로드
+
+        // 특정 카테고리의 제품 로드
     private void loadProducts(String category) {
         productList.clear();
         productList.addAll(productDataSource.getProductsByCategory("교양"));

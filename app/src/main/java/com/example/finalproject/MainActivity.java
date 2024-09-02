@@ -17,6 +17,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.tabs.TabLayout;
+
 public class MainActivity extends AppCompatActivity {
 
     Intent intent;
@@ -24,16 +27,38 @@ public class MainActivity extends AppCompatActivity {
     Button btnElectiveCourse, btnInfomationSecurity;
     ImageView imgSetting;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+
         btnElectiveCourse = (Button) findViewById(R.id.btnElectiveCourse);
         btnInfomationSecurity = (Button) findViewById(R.id.btnInformationSecurity);
 
         imgSetting = (ImageView) findViewById(R.id.imgSetting);
+
+
+        // 바텀 내비게이션
+        BottomNavigationView homenavigationView = findViewById(R.id.mainBnavi);
+
+        homenavigationView.setSelectedItemId(R.id.menu_home);
+
+        homenavigationView.setOnNavigationItemSelectedListener(item -> {
+            if(item.getItemId() == R.id.menu_chat){
+                startActivity(new Intent(this, ChattingActivity.class));
+                finish();  // 현재 액티비티 종료
+                return true;
+            } else if (item.getItemId() == R.id.menu_myInfo) {
+                startActivity(new Intent(this, MyInfoActivity.class));
+                finish();  // 현재 액티비티 종료
+                return true;
+            }
+            return false;
+        });
+
 
 
         // 이미지 이벤트 처리

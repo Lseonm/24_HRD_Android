@@ -15,6 +15,8 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import java.lang.ref.ReferenceQueue;
 import java.util.ArrayList;
 
@@ -48,6 +50,26 @@ public class InformationSecurityActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
         loadProducts("정보보안학과");
+
+        // 바텀 내비게이션
+        BottomNavigationView isBnavi = findViewById(R.id.isBnavi);
+        isBnavi.setOnNavigationItemSelectedListener(item -> {
+            if(item.getItemId() == R.id.menu_chat){
+                startActivity(new Intent(this, ChattingActivity.class));
+                finish();  // 현재 액티비티 종료
+                return true;
+            } else if (item.getItemId() == R.id.menu_myInfo) {
+                startActivity(new Intent(this, MyInfoActivity.class));
+                finish();  // 현재 액티비티 종료
+                return true;
+            } else if (item.getItemId() == R.id.menu_home) {
+                startActivity(new Intent(this, MainActivity.class));
+                finish();  // 현재 액티비티 종료
+                return true;
+            }
+            return false;
+        });
+
 
 
         // 버튼 기능

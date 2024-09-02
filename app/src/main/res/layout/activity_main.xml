@@ -35,20 +35,22 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:weightSum="5"
+        android:orientation="vertical"
         android:background="#DFE4D6">
 
         <LinearLayout
             android:layout_width="340dp"
             android:layout_height="510dp"
             android:layout_margin="35dp"
+            android:layout_weight="4"
             android:orientation="vertical"
             android:background="#DCDFD9">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="30dp">
+                android:orientation="horizontal">
 
                 <android.widget.Button
                     android:background="#C6D8C2"
@@ -180,6 +182,15 @@
             </LinearLayout>
 
         </LinearLayout>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/mainBnavi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            app:menu="@menu/bottomitem"/>
+
 
     </LinearLayout>
 
